@@ -8,7 +8,7 @@
     <LinearLayout
         android:id="@+id/quickPlaceLayout"
         android:layout_width="118dp"
-        android:layout_height="185dp"
+        android:layout_height="200dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,7 +35,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ellipsize="end"
-            android:singleLine="true"
+            android:singleLine="false"
             android:text="2 dias restantes" />
 
     </LinearLayout>
