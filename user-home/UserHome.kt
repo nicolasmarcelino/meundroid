@@ -10,13 +10,19 @@ class UserHome : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_home)
 
+        val dataset = arrayOf(
+            QuickBook(R.drawable.book_01, "Gerenciamento de serviços de TI na prática", "2 dias restantes"),
+            QuickBook(R.drawable.book_02, "Governança de TI", "15 dias restantes"),
+            QuickBook(R.drawable.book_03, "Sistemas de Informação", "2 dias atrasado")
+        )
+
         val dataset_2 = arrayOf(
-            QuickPlace(R.drawable.ic_quickplace, "Sala 12", "24/09/2025 11:00\n24/09/2025 11:00"),
+            QuickPlace(R.drawable.ic_quickplace, "Sala q12", "24/09/2025 11:00\n24/09/2025 11:00"),
             QuickPlace(R.drawable.book_01, "Gerencimento de TI", "Disponível"),
             QuickPlace(R.drawable.book_03, "Sistemas de Informação", "3 dias")
         )
 
-        val quickBookAdapter = QuickPlaceAdapter(dataset_2)
+        val quickBookAdapter = QuickBookAdapter(dataset)
 
         val recyclerView: RecyclerView = findViewById(R.id.quickBookRecycler)
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
